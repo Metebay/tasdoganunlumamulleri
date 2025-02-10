@@ -3,152 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taşdoğan Unlu Mamülleri - Yapım Aşamasında</title>
-    <meta name="description" content="Taşdoğan Unlu Mamülleri. Sitemiz çok yakında hazır olacak!">
-    <meta name="keywords" content="taşdoğan unlu mamülleri, lübnan lavaşı, suriye ekmeği, gaziantep unlu mamülleri, taze lavaş, lavaş üretimi, gaziantep fırın, unlu mamül üreticisi">
-    <meta name="author" content="Taşdoğan Unlu Mamülleri">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <meta name="language" content="Turkish">
-    <meta name="geo.region" content="TR-GAZ">
-    <meta name="geo.placename" content="Gaziantep">
-
-    <!-- Open Graph Meta Tags (Sosyal Medya için) -->
-    <meta property="og:title" content="Taşdoğan Unlu Mamülleri - Yapım Aşamasında">
-    <meta property="og:description" content="Taşdoğan Unlu Mamülleri, Gaziantep ve çevre illerde faaliyet gösteren, Lübnan Lavaşı (Suriye Ekmeği) üretimi ile öne çıkan bir firmadır. Sitemiz çok yakında hazır olacak!">
-    <meta property="og:image" content="https://www.tasdoganunlumamulleri.com.tr/images/logo.png">
+    <meta name="description" content="Taşdoğan Unlu Mamulleri - Geleneksel lezzetlerimizle sofralarınıza tat katıyoruz. Lübnan Lavaşı, taze ekmekler ve daha fazlası için bizi ziyaret edin.">
+    <meta name="keywords" content="Taşdoğan, unlu mamuller, Lübnan Lavaşı, taze ekmek, Gaziantep, fırın, organik ekmek">
+    <meta name="author" content="Bayındır Medya">
+    <meta property="og:title" content="Taşdoğan Unlu Mamulleri">
+    <meta property="og:description" content="Taşdoğan Unlu Mamulleri - Geleneksel lezzetlerimizle sofralarınıza tat katıyoruz.">
+    <meta property="og:image" content="https://www.tasdoganunlumamulleri.com.tr/images/mamullogo.png">
     <meta property="og:url" content="https://www.tasdoganunlumamulleri.com.tr">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Taşdoğan Unlu Mamülleri - Yapım Aşamasında">
-    <meta name="twitter:description" content="Taşdoğan Unlu Mamülleri, Gaziantep ve çevre illerde faaliyet gösteren, Lübnan Lavaşı (Suriye Ekmeği) üretimi ile öne çıkan bir firmadır. Sitemiz çok yakında hazır olacak!">
-    <meta name="twitter:image" content="https://www.tasdoganunlumamulleri.com.tr/images/logo.png">
-
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>Taşdoğan Unlu Mamulleri</title>
+    <link rel="icon" type="image/x-icon" href="images/mamullogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
+        /* Reset ve Temel Stiller */
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2ec771);
-            color: #fff;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        :root {
+            --primary: #D4A259;
+            --secondary: #6F4E37;
+            --light: #FFF5EB;
+            --dark: #2D2926;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(45, 41, 38, 0.8), rgba(45, 41, 38, 0.8)), 
+                        url('images/banner-bg.jpg') center/cover;
+            display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            overflow: hidden;
             text-align: center;
+            color: white;
+            padding-top: 80px;
         }
 
-        h1 {
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 4rem;
-            margin: 0;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .description {
-            font-size: 1.5rem;
-            margin: 20px 0;
-            color: rgba(255, 255, 255, 0.9);
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
         }
 
-        .animation-wrapper {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 30px 0;
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            background: var(--primary);
+            color: white;
+            transition: transform 0.3s;
         }
 
-        .circle {
-            position: absolute;
-            border: 5px solid rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            animation: pulse 1.5s infinite;
+        .cta-btn:hover {
+            transform: translateY(-3px);
         }
 
-        .circle:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 20px;
-            left: 20px;
-            animation-delay: 0.3s;
+        /* Ürünler Bölümü */
+        .products {
+            padding: 6rem 5%;
         }
 
-        .circle:nth-child(3) {
-            width: 30px;
-            height: 30px;
-            top: 35px;
-            left: 35px;
-            animation-delay: 0.6s;
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
         }
 
-        footer {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.7);
-            position: absolute;
-            bottom: 20px;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .product-info {
+            padding: 1.5rem;
             text-align: center;
         }
 
-        .social-icons {
-            margin-top: 10px;
+        /* İletişim Bölümü */
+        .contact-section {
+            background: var(--secondary);
+            color: white;
+            padding: 6rem 5%;
         }
 
-        .social-icons a {
-            color: rgba(255, 255, 255, 0.7);
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            margin-right: 1rem;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            border: 3px solid var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary);
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
         }
 
-        .social-icons a:hover {
-            color: #fff;
+        footer a:hover {
+            text-decoration: underline;
         }
 
-        .bold-text {
-            font-weight: bold;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
+        /* Mobil Tasarım */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
             }
-            50% {
-                transform: scale(1.5);
-                opacity: 0.5;
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .map iframe {
+                height: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Yapım Aşamasında</h1>
-    <p class="description">Taşdoğan Unlu Mamülleri Web Sitemiz çok yakında burada olacak!</p>
-    <div class="animation-wrapper">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-    <footer>
-        Bu site Bayındır Medya tarafından tasarlanmaktadır.<br>
-        <br>
-        <span class="bold-text">Bayındır Medya</span>
-        <div class="social-icons">
-            <a href="https://t.me/bayindirmedya" target="_blank" aria-label="Telegram">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://www.instagram.com/bayindirmedya" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.bayindirmedya.online" target="_blank" aria-label="Web Sitesi">
-                <i class="fas fa-globe"></i>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/mamullogo.png" alt="Taşdoğan Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-content">
+            <h1>Taşdoğan Unlu Mamulleri</h1>
+            <p>Ekmeğin Tadı Tuzu</p>
+            <a href="#iletisim" class="cta-btn">
+                <i class="fas fa-phone"></i>
+                Bize Ulaşın
             </a>
         </div>
+    </section>
+
+    <!-- Ürünler -->
+    <section class="products" id="urunler">
+        <h2 class="section-title">Ürünlerimiz</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/urun-ekmek.jpg" alt="Lübnan Lavaşı">
+                </div>
+                <div class="product-info">
+                    <h3>LÜBNAN LAVAŞI (SURİYE EKMEĞİ)</h3>
+                    <p>%100 organik tam buğday unu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="contact-section" id="iletisim">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2 class="section-title" style="color: var(--light)">Bize Ulaşın</h2>
+                <p><i class="fas fa-map-marker-alt"></i>Sanayi Mah. 60366 Nolu Cad. No:4/A Şehitkamil/GAZİANTEP</p>
+                <p><i class="fas fa-phone"></i>+90 535 346 5009</p>
+                <p><i class="fas fa-envelope"></i>tasdoganlimited@gmail.com</p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25623.456789012345!2d37.12345678901234!3d37.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA3JzI0LjQiTiAzN8KwMDcrMjQuNCJF!5e0!3m2!1str!2str!4v1234567890123!5m2!1str!2str" 
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Taşdoğan Unlu Mamulleri. Tüm hakları saklıdır.</p>
+        <p>
+            <a href="https://www.bayindirmedya.online" target="_blank">Bayındır Medya™</a> | Design by <a href="https://www.instagram.com/nurettinmetebayindir/" target="_blank">Mete</a>
+        </p>
     </footer>
 </body>
 </html>
