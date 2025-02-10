@@ -26,6 +26,9 @@
     <meta name="twitter:description" content="Taşdoğan Unlu Mamülleri, Gaziantep ve çevre illerde faaliyet gösteren, Lübnan Lavaşı (Suriye Ekmeği) üretimi ile öne çıkan bir firmadır. Sitemiz çok yakında hazır olacak!">
     <meta name="twitter:image" content="https://www.tasdoganunlu.com/images/logo.png">
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         body {
             margin: 0;
@@ -88,6 +91,27 @@
             color: rgba(255, 255, 255, 0.7);
             position: absolute;
             bottom: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        .bold-text {
+            font-weight: bold;
         }
 
         @keyframes pulse {
@@ -104,12 +128,27 @@
 </head>
 <body>
     <h1>Yapım Aşamasında</h1>
-    <p class="description">Bu site çok yakında hazır olacak!</p>
+    <p class="description">Taşdoğan Unlu Mamülleri, Gaziantep ve çevre illerde faaliyet gösteren, Lübnan Lavaşı (Suriye Ekmeği) üretimi ile öne çıkan bir firmadır. Sitemiz çok yakında hazır olacak!</p>
     <div class="animation-wrapper">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-    <footer>Bu site Bayındır Medya tarafından tasarlanmaktadır.</footer>
+    <footer>
+        Bu site Bayındır Medya tarafından tasarlanmaktadır.<br>
+        <br>
+        <span class="bold-text">Bayındır Medya</span>
+        <div class="social-icons">
+            <a href="https://t.me/bayindirmedya" target="_blank" aria-label="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.instagram.com/bayindirmedya" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.bayindirmedya.com" target="_blank" aria-label="Web Sitesi">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
